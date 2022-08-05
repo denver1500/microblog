@@ -1,0 +1,128 @@
+2022-07-27 09:42:24,878 ERROR: Exception on /user/dubina [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 66, in user
+    posts = [
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/query.py", line 1802, in filter_by
+    clauses = [
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/query.py", line 1803, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/sql/operators.py", line 366, in __eq__
+    return self.operate(eq, other)
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 317, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1308, in __eq__
+    self.property._optimized_compare(
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1696, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).
+2022-07-27 09:42:29,795 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 09:44:32,944 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:09:54,052 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:19:44,457 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:20:22,426 ERROR: Exception on /explore [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 134, in explore
+    return render_template('index.html',title='Explore',posts=posts)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/root/python/flask/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/root/python/flask/app/templates/index.html", line 6, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-07-28 04:26:18,587 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:36:57,110 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:37:01,152 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 25, in index
+    return  render_template('index.html',title='Home Page',form=form,posts=posts)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/root/python/flask/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/root/python/flask/app/templates/index.html", line 9, in block 'content'
+    {{ form.post.label }}<br>
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.EmptyForm object' has no attribute 'post'
+2022-07-28 04:40:33,619 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-28 04:40:35,812 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 25, in index
+    return  render_template('index.html',title='Home Page',form=form,posts=posts)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/root/python/flask/app/templates/base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "/root/python/flask/app/templates/index.html", line 9, in block 'content'
+    {{ form.post.label }}<br>
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.EmptyForm object' has no attribute 'post'
+2022-07-28 04:41:08,932 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]

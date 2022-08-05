@@ -1,0 +1,130 @@
+2022-08-03 12:32:06,725 ERROR: Exception on /translate [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 141, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/root/python/flask/app/translate.py", line 7, in translate
+    if 'MS_TRANSLATOR_KEY' not in current.app.config or \
+NameError: name 'current' is not defined
+2022-08-03 12:33:01,906 ERROR: Exception on /auth/reset_password_request [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/python/flask/app/auth/routes.py", line 55, in reset_password_request
+    send_password_reset_email(user)
+  File "/root/python/flask/app/auth/email.py", line 8, in send_password_reset_email
+    sender=app.config['ADMINS'][0],
+NameError: name 'app' is not defined
+2022-08-03 12:46:16,959 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:47:48,055 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:48:29,661 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:48:34,380 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:49:01,873 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:49:32,528 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:49:50,140 INFO: Microblog startup [in /root/python/flask/app/__init__.py:73]
+2022-08-03 12:50:01,648 ERROR: Exception on /translate [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 141, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/root/python/flask/app/translate.py", line 7, in translate
+    if 'MS_TRANSLATOR_KEY' not in current.app.config or \
+NameError: name 'current' is not defined
+2022-08-04 07:50:34,407 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 07:55:48,688 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 07:57:08,541 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 07:57:47,471 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 07:59:47,093 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 08:00:24,639 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 08:43:23,373 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 09:25:18,750 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 09:25:23,312 ERROR: Exception on /index [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 46, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/base.html", line 47, in template
+    action="{{ url_for_'main.search') }}">
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'string'
+2022-08-04 09:26:50,111 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 09:27:37,643 ERROR: Exception on /translate [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 142, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/root/python/flask/app/translate.py", line 7, in translate
+    if 'MS_TRANSLATOR_KEY' not in current.app.config or \
+NameError: name 'current' is not defined
+2022-08-04 09:29:42,555 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 09:29:44,797 ERROR: Exception on /translate [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 142, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/root/python/flask/app/translate.py", line 8, in translate
+    not current.app.config['MS_TRANSLATOR_KEY']:
+NameError: name 'current' is not defined
+2022-08-04 09:30:20,854 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]

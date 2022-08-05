@@ -1,0 +1,115 @@
+2022-07-27 07:03:30,490 ERROR: Exception on /user/susan [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 74, in user
+    return render_template('user.html',user=user,posts=posts)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/root/python/flask/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/root/python/flask/app/templates/user.html", line 17, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-07-27 07:05:14,088 ERROR: Exception on /user/susan [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 74, in user
+    return render_template('user.html',user=user,posts=posts,form=form)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
+    return _render(
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/root/python/flask/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/root/python/flask/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/root/python/flask/app/templates/user.html", line 17, in block 'content'
+    {{ form.hidden_tag() }}
+  File "/usr/local/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-07-27 07:05:24,903 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 07:13:49,818 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 07:14:41,666 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 07:15:13,903 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 08:30:30,640 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 08:31:35,446 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 08:32:08,666 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 08:39:10,157 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 09:20:49,007 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 09:21:02,562 ERROR: Exception on /explore [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 132, in explore
+    posts=Post.query.oreder_by(Post.timestamp.desc()).all()
+AttributeError: 'BaseQuery' object has no attribute 'oreder_by'
+2022-07-27 09:21:28,148 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 09:39:38,883 INFO: Microblog startup [in /root/python/flask/app/__init__.py:43]
+2022-07-27 09:39:43,431 ERROR: Exception on /user/dubina [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/routes.py", line 66, in user
+    posts = Post.query.filter_by(author=username).first()
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/query.py", line 1802, in filter_by
+    clauses = [
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/query.py", line 1803, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/sql/operators.py", line 366, in __eq__
+    return self.operate(eq, other)
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/attributes.py", line 317, in operate
+    return op(self.comparator, *other, **kwargs)
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1308, in __eq__
+    self.property._optimized_compare(
+  File "/usr/local/lib64/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 1696, in _optimized_compare
+    raise sa_exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Mapped instance expected for relationship comparison to object.   Classes, queries and other SQL elements are not accepted in this context; for comparison with a subquery, use Post.author.has(**criteria).

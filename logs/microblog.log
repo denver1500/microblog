@@ -1,0 +1,55 @@
+2022-08-04 09:30:22,733 ERROR: Exception on /translate [POST] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 303, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/root/python/flask/app/main/routes.py", line 142, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "/root/python/flask/app/translate.py", line 11, in translate
+    'Ocp-Apim-Subscription-Key': current.app.config['MS_TRANSLATOR_KEY'],
+NameError: name 'current' is not defined
+2022-08-04 09:30:46,901 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 10:01:13,903 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 10:01:16,384 ERROR: Exception on /explore [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1521, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1861, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/root/python/flask/app/main/routes.py", line 20, in before_request
+    g.locale = str(get_locale())
+  File "/usr/local/lib/python3.9/site-packages/flask_babel/__init__.py", line 226, in get_locale
+    rv = babel.locale_selector_func()
+  File "/root/python/flask/app/__init__.py", line 83, in get_locale
+    return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+NameError: name 'current_app' is not defined
+2022-08-04 10:02:32,616 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
+2022-08-04 10:02:34,851 ERROR: Exception on /explore [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:1455]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1521, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1861, in preprocess_request
+    rv = self.ensure_sync(before_func)()
+  File "/root/python/flask/app/main/routes.py", line 20, in before_request
+    g.locale = str(get_locale())
+  File "/usr/local/lib/python3.9/site-packages/flask_babel/__init__.py", line 226, in get_locale
+    rv = babel.locale_selector_func()
+  File "/root/python/flask/app/__init__.py", line 83, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'app' is not defined
+2022-08-04 10:04:17,995 INFO: Microblog startup [in /root/python/flask/app/__init__.py:77]
